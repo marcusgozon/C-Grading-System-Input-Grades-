@@ -5,9 +5,9 @@ int main() {
 
     //variables
     string name;
-    int OLCC02, OLIMFBDS, OLFIL02, OLPHYE003, OLSS02, OLVAL02;
-    int sum = 0;
-    int average;
+    double OLCC02, OLIMFBDS, OLFIL02, OLPHYE003, OLSS02, OLVAL02;
+    double sum = 0;
+    double average;
 
     //input user name
     cout << "(Surname, First Name, Middle initial)" << endl;
@@ -28,19 +28,19 @@ int main() {
     cout <<"Enter your grade in OLVAL02: ";
     cin >> OLVAL02;
 
-    //computation grades
+    //average computation
     sum = OLCC02 + OLIMFBDS + OLFIL02 + OLPHYE003 + OLSS02 + OLVAL02;
     average = sum / 6;
 
     //final output
     cout << "Student Name: " << name << endl;
-    cout << "Average Grade: " << average << endl;
+    cout << "GWA: " << average << endl;
 
-    //conditionaG
-    if (average <= 75){
-        cout << "You  Passed!" << endl;
+    //conditional statement
+    if (average <=3.00) {
+        cout << "Status: Passed!" << endl;
     } else {
-        cout << "You Failed" << endl;
+        cout << "Status: Failed" << endl;
     }
 
     return 0;
